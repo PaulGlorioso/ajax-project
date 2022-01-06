@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -24,27 +25,27 @@
   </header>
   <main>
     <div class="daily-tasks">
-      <div>
+      <div class="title">
         <h1>Daily Tasks</h1>
       </div>
-      <div>
+      <div class="add-form">
         <h2>Add task</h2>
         <form>
           <input>
           <button>Save</button>
         </form>
       </div>
-      <div>
+      <div class="list-section">
         <p>No tasks have been added for today.</p>
-        <div>
-          <ul>
-            <li>Hit rock<input type="checkbox"><i class="fas fa-pen"></i></li>
-            <li>bottle<input type="checkbox"><i class="fas fa-pen"></i></li>
-            <li>check price<input type="checkbox"><i class="fas fa-pen"></i></li>
+        <div class="tasks">
+          <ul id="task-list">
+            <li><div class="li-text"><i class="fas fa-circle"></i>Hit rock</div><div class="li-sel"><input type="checkbox"><i class="fas fa-pen"></i></div></li>
+            <li><div class="li-text"><i class="fas fa-circle"></i>bottle</div><div class="li-sel"><input type="checkbox"><i class="fas fa-pen"></i></div></li>
+            <li><div class="li-text"><i class="fas fa-circle"></i>check price</div><div class="li-sel"><input type="checkbox"><i class="fas fa-pen"></i></div></li>
           </ul>
         </div>
       </div>
-      <div>
+      <div class="add-btn">
         <button>Add</button>
       </div>
     </div>
