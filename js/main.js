@@ -19,11 +19,14 @@ document.addEventListener('submit', function (event) {
     data.entries.unshift(values);
     var taskList = document.querySelector('#task-list');
     var create = createTask(values);
-    taskList.prepend(create);
+    taskList.append(create);
   }
   taskForm.className = 'add-form h';
   var noTasks = document.querySelector('.no-tasks');
   noTasks.className = 'no-tasks h';
+  var tasks = document.querySelector('.tasks.h');
+  tasks.className = 'tasks';
+  taskSection.className = 'list-section';
   form.reset();
   data.editing = null;
 });
@@ -40,14 +43,15 @@ function newTaskForm(event) {
   } else {
     taskForm.className = 'add-form h';
     taskSection.className = 'list-section';
-    counter1 += 2;
   }
 }
 addBtn.addEventListener('click', newTaskForm);
 
 if (data.entries.length > 0) {
   var noTasks = document.querySelector('.no-tasks');
-  noTasks.className = 'no tasks h';
+  noTasks.className = 'no-tasks h';
+  var tasks = document.querySelector('.tasks.h');
+  tasks.className = 'tasks';
 }
 
 window.addEventListener('DOMContentLoaded', function (event) {
@@ -61,4 +65,24 @@ window.addEventListener('DOMContentLoaded', function (event) {
 function createTask(values) {
   var $task = document.createElement('li');
   $task.setAttribute('id', values.taskId);
+
+  var $tasktext = document.createElement('div');
+  $tasktext.setAttribute('class', 'li-text');
+  $tasktext.textContent = values.task;
+  var $circle = document.createElement('i');
+  $circle.setAttribute('class', 'fas fa-circle');
+  $tasktext.prepend($circle);
+
+  var $taskSel = document.createElement('div');
+  $taskSel.setAttribute('class', 'li-sel');
+  var $check = document.createElement('input');
+  $check.setAttribute('type', 'checkbox');
+  var $editI = document.createElement('i');
+  $editI.setAttribute('class', 'fas fa-pen');
+  $taskSel.appendChild($check);
+  $taskSel.appendChild($editI);
+
+  $task.appendChild($tasktext);
+  $task.appendChild($taskSel);
+  return $task;
 }
