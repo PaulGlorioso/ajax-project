@@ -19,7 +19,9 @@ document.addEventListener('submit', function (event) {
     data.entries.unshift(values);
     var taskList = document.querySelector('#task-list');
     var create = createTask(values);
-    taskList.append(create);
+    taskList.prepend(create);
+    var tasks = document.querySelector('.tasks.h');
+    tasks.className = 'tasks';
   }
   taskForm.className = 'add-form h';
   var noTasks = document.querySelector('.no-tasks');
@@ -28,6 +30,7 @@ document.addEventListener('submit', function (event) {
   form.reset();
   data.editing = null;
 });
+
 var addBtn = document.querySelector('.add-button');
 var counter1 = 1;
 var taskForm = document.querySelector('.add-form');
@@ -85,3 +88,19 @@ function createTask(values) {
   $task.appendChild($taskSel);
   return $task;
 }
+
+var $taskList = document.querySelector('#task-list');
+$taskList.addEventListener('click', function (event) {
+  if (event.target.tagName === 'I') {
+    var editBtn = event.target;
+    newTaskForm();
+    document.querySelector('.task-ev').textContent = 'Edit Task';
+    var taskNum = editBtn.getAttribute('data-task-id');
+    for (var i = 0; i < data.entries.length; i++) {
+      if (data.entries[i].taskId === parseInt(taskNum)) {
+        data.editing = data.entries[i];
+      }
+    }
+    taskItem.value = data.editing.task;
+  }
+});
