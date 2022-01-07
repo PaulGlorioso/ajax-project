@@ -24,8 +24,6 @@ document.addEventListener('submit', function (event) {
   taskForm.className = 'add-form h';
   var noTasks = document.querySelector('.no-tasks');
   noTasks.className = 'no-tasks h';
-  var tasks = document.querySelector('.tasks.h');
-  tasks.className = 'tasks';
   taskSection.className = 'list-section';
   form.reset();
   data.editing = null;
@@ -79,6 +77,7 @@ function createTask(values) {
   $check.setAttribute('type', 'checkbox');
   var $editI = document.createElement('i');
   $editI.setAttribute('class', 'fas fa-pen');
+  $editI.setAttribute('data-task-id', values.taskId);
   $taskSel.appendChild($check);
   $taskSel.appendChild($editI);
 
