@@ -37,7 +37,11 @@ nav > i {
   width: 100%;
 }
 
-.list-section > p {
+.no-tasks {
+  font-size: large;
+}
+
+.no-tasks.h {
   display: none;
 }
 
@@ -45,6 +49,10 @@ nav > i {
   border: 1px solid black;
   border-radius: 2rem;
   background-color: #ffc3c325;
+}
+
+.tasks.h {
+  display: none;
 }
 
 ul {
@@ -70,19 +78,39 @@ li:last-child {
   border-radius: 2rem;
 }
 
+.add-btn.h {
+  display: none;
+}
+
 .fa-circle {
   font-size: small;
   padding-right: 1rem;
 }
 
 .li-sel > input {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .add-form {
   border: 1px solid black;
   border-radius: 2rem;
+  background-color: #ffc3c325;
+}
+
+textarea {
+  font-size: x-large;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.sub > button {
+  background-color: green;
+  font-size: 1.5rem;
+  padding: 0.1rem 2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 769px) {

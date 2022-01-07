@@ -28,18 +28,18 @@
       <div class="title">
         <h1>Daily Tasks</h1>
       </div>
-      <div class="add-form ">
+      <div class="add-form h">
         <h2>Add task</h2>
-        <form>
-          <textarea rows="5"></textarea>
-          <div>
+        <form id="form">
+          <textarea required class="task-text" rows="4"></textarea>
+          <div class="sub">
             <button>Save</button>
           </div>
         </form>
       </div>
       <div class="list-section">
-        <p>No tasks have been added for today.</p>
-        <div class="tasks">
+        <p class="no-tasks h">No tasks have been added for today.</p>
+        <div class="tasks ">
           <ul id="task-list">
             <li><div class="li-text"><i class="fas fa-circle"></i>Hit rock</div><div class="li-sel"><input type="checkbox"><i class="fas fa-pen"></i></div></li>
             <li><div class="li-text"><i class="fas fa-circle"></i>bottle</div><div class="li-sel"><input type="checkbox"><i class="fas fa-pen"></i></div></li>
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="add-btn">
-        <button>Add</button>
+        <button class="add-button">Add</button>
       </div>
     </div>
     <div class="checklist">

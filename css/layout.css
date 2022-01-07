@@ -82,11 +82,17 @@ li {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .add-form > h2 {
   margin: 0;
   margin-bottom: 1rem;
+}
+
+.sub {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,11 +102,32 @@ li {
 }
 
 @media screen and (min-width: 769px) {
+  .fa-pen {
+    padding-left: 2rem;
+  }
+
   .daily-tasks {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 60%;
   }
 
-  .fa-pen {
-    padding-left: 2rem;
+  .title {
+    flex-basis: 100%;
+  }
+
+  .add-form {
+    flex-basis: 45%;
+    margin: 0;
+    padding-right: 1rem;
+  }
+
+  .list-section-2c {
+    flex-basis: 45%;
+  }
+
+  .add-btn {
+    flex-basis: 100%;
   }
 }
