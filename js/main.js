@@ -100,12 +100,39 @@ $taskList.addEventListener('click', function (event) {
       }
     }
     taskItem.value = data.editing.task;
+    var deleteBtn = document.createElement('a');
+    deleteBtn.setAttribute('href', '#');
+    deleteBtn.setAttribute('class', 'delete-btn');
+    deleteBtn.textContent = 'Delete';
+    var $btnSel = document.querySelector('.sub');
+    $btnSel.setAttribute('class', 'select');
+    $btnSel.append(deleteBtn);
+    $btnSel.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A') {
+        for (var i = 0; i < data.entries.length; i++) {
+          if (data.editing.taskId === data.entries[i].taskId) {
+            var item = document.getElementById(data.editing.taskId);
+            item.remove();
+            data.entries.splice(i, 1);
+          }
+          var form = document.querySelector('#form');
+          document.querySelector('.task-ev').textContent = 'New Task';
+          deleteBtn.remove();
+          var $select = document.querySelector('.select');
+          $select.setAttribute('class', 'sub');
+          taskForm.className = 'add-form h';
+          document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
+          form.reset();
+          data.editing = null;
+        }
+      }
+    });
   }
-  var deleteBtn = document.createElement('a');
-  deleteBtn.setAttribute('href', '#');
-  deleteBtn.setAttribute('class', 'delete-btn');
-  deleteBtn.textContent = 'Delete';
-  var $btnSel = document.querySelector('.sub');
-  $btnSel.setAttribute('class', 'select');
-  $btnSel.append(deleteBtn);
+  // var deleteBtn = document.createElement('a');
+  // deleteBtn.setAttribute('href', '#');
+  // deleteBtn.setAttribute('class', 'delete-btn');
+  // deleteBtn.textContent = 'Delete';
+  // var $btnSel = document.querySelector('.sub');
+  // $btnSel.setAttribute('class', 'select');
+  // $btnSel.append(deleteBtn);
 });
