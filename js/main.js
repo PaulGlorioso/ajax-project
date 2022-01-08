@@ -20,8 +20,6 @@ document.addEventListener('submit', function (event) {
     var taskList = document.querySelector('#task-list');
     var create = createTask(values);
     taskList.prepend(create);
-    var tasks = document.querySelector('.tasks.h');
-    tasks.className = 'tasks';
   }
   taskForm.className = 'add-form h';
   var noTasks = document.querySelector('.no-tasks');
@@ -103,4 +101,11 @@ $taskList.addEventListener('click', function (event) {
     }
     taskItem.value = data.editing.task;
   }
+  var deleteBtn = document.createElement('a');
+  deleteBtn.setAttribute('href', '#');
+  deleteBtn.setAttribute('class', 'delete-btn');
+  deleteBtn.textContent = 'Delete';
+  var $btnSel = document.querySelector('.sub');
+  $btnSel.setAttribute('class', 'select');
+  $btnSel.append(deleteBtn);
 });

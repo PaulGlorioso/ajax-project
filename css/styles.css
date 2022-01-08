@@ -113,6 +113,25 @@ textarea {
   margin-top: 1rem;
 }
 
+.select > button {
+  background-color: green;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.select > a {
+  text-decoration: none;
+  background-color: red;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 769px) {
   .tasks {
     border: 3px solid black;

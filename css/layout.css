@@ -95,6 +95,12 @@ li {
   justify-content: flex-end;
 }
 
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 768px) {
   nav > a {
     display: none;
