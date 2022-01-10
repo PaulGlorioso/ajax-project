@@ -1,9 +1,3 @@
-@media screen and (max-width: 768px) {
-  nav > a {
-    display: none;
-  }
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -14,20 +8,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   background-image: url("/images/background.png");
-  padding-left: 2rem;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 1rem 0;
-}
-
-nav > i {
-  font-size: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
 }
 
 .daily-tasks {
@@ -102,7 +83,22 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-  nav > a {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+
+  .close {
+    padding: 1rem;
+  }
+
+  .close > a {
     display: none;
   }
 }
@@ -135,5 +131,11 @@ li {
 
   .add-btn {
     flex-basis: 100%;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
   }
 }

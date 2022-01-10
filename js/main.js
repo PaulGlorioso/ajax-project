@@ -136,3 +136,18 @@ $taskList.addEventListener('click', function (event) {
   // $btnSel.setAttribute('class', 'select');
   // $btnSel.append(deleteBtn);
 });
+
+var navI = document.querySelector('.close');
+function showNav() {
+  if (navI.className === 'close') {
+    navI.className = 'open';
+  } else {
+    navI.className = 'close';
+  }
+}
+
+navI.addEventListener('click', function (event) {
+  if (event.target.tagName === 'I') {
+    showNav();
+  }
+});
