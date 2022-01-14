@@ -94,8 +94,12 @@ li {
     overflow-x: hidden;
   }
 
+  .open > a {
+    padding: 1rem 0;
+  }
+
   .close {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .close > a {
