@@ -25,6 +25,7 @@ document.addEventListener('submit', function (event) {
   const noTasks = document.querySelector('.no-tasks');
   noTasks.className = 'no-tasks h';
   taskSection.className = 'list-section';
+  addBtnDiv.className = 'add-btn';
   form.reset();
   data.editing = null;
 });
@@ -33,15 +34,18 @@ const addBtn = document.querySelector('.add-button');
 let counter1 = 1;
 const taskForm = document.querySelector('.add-form');
 const taskSection = document.querySelector('.list-section');
+const addBtnDiv = document.querySelector('.add-btn');
 
 function newTaskForm(event) {
   if (counter1 % 2) {
     taskForm.className = 'add-form';
     taskSection.className = 'list-section-2c';
+    addBtnDiv.className = 'add-btn h';
     counter1 += 2;
   } else {
     taskForm.className = 'add-form h';
     taskSection.className = 'list-section';
+    addBtnDiv.className = 'add-btn';
   }
 }
 addBtn.addEventListener('click', newTaskForm);
@@ -114,16 +118,26 @@ $taskList.addEventListener('click', function (event) {
             const item = document.getElementById(data.editing.taskId);
             item.remove();
             data.entries.splice(i, 1);
+            const form = document.querySelector('#form');
+            document.querySelector('.task-ev').textContent = 'New Task';
+            deleteBtn.remove();
+            const $select = document.querySelector('.select');
+            $select.setAttribute('class', 'sub');
+            taskForm.className = 'add-form h';
+            addBtnDiv.className = 'add-btn';
+            document.querySelector('.task-ev').textContent = 'Add Task';
+            document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
+            form.reset();
           }
-          const form = document.querySelector('#form');
-          document.querySelector('.task-ev').textContent = 'New Task';
-          deleteBtn.remove();
-          const $select = document.querySelector('.select');
-          $select.setAttribute('class', 'sub');
-          taskForm.className = 'add-form h';
-          document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
-          form.reset();
-          data.editing = null;
+          // const form = document.querySelector('#form');
+          // document.querySelector('.task-ev').textContent = 'New Task';
+          // deleteBtn.remove();
+          // const $select = document.querySelector('.select');
+          // $select.setAttribute('class', 'sub');
+          // taskForm.className = 'add-form h';
+          // document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
+          // form.reset();
+          // data.editing = null;
         }
       }
     });

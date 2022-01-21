@@ -155,5 +155,6 @@ textarea {
 
   nav > i {
     pointer-events: none;
+    padding-right: 1rem;
   }
 }
