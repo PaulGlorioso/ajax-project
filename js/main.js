@@ -129,26 +129,10 @@ $taskList.addEventListener('click', function (event) {
             document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
             form.reset();
           }
-          // const form = document.querySelector('#form');
-          // document.querySelector('.task-ev').textContent = 'New Task';
-          // deleteBtn.remove();
-          // const $select = document.querySelector('.select');
-          // $select.setAttribute('class', 'sub');
-          // taskForm.className = 'add-form h';
-          // document.querySelector('.list-section-2c').setAttribute('class', 'list-section');
-          // form.reset();
-          // data.editing = null;
         }
       }
     });
   }
-  // var deleteBtn = document.createElement('a');
-  // deleteBtn.setAttribute('href', '#');
-  // deleteBtn.setAttribute('class', 'delete-btn');
-  // deleteBtn.textContent = 'Delete';
-  // var $btnSel = document.querySelector('.sub');
-  // $btnSel.setAttribute('class', 'select');
-  // $btnSel.append(deleteBtn);
 });
 
 const navI = document.querySelector('.close');

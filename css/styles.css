@@ -6,14 +6,6 @@ main {
   font-family: "Roboto slab", serif;
 }
 
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-image: url("/images/background.png");
-  padding-left: 2rem;
-}
-
 .open {
   background-color: #e5e5e5;
   padding: 0.5rem;
