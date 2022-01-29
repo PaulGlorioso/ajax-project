@@ -4,15 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="nav-bar">
+      <nav class="close">
+        <i class="fas fa-bars"></i>
+        <a href="#">Daily Tasks</a>
+        <a href="#">CheckList</a>
+        <a href="#">Happy Home Network</a>
+        <a href="#">Stalk Market</a>
+      </nav>
+    </div>
   </header>
   <main>
+    <div class="daily-tasks">
+      <div class="title">
+        <h1>Daily Tasks</h1>
+      </div>
+      <div class="add-form h">
+        <h2 class="task-ev">Add task</h2>
+        <form id="form">
+          <textarea required class="task-text" rows="4"></textarea>
+          <div class="sub">
+            <button>Save</button>
+          </div>
+        </form>
+      </div>
+      <div class="list-section">
+        <p class="no-tasks">No tasks have been added for today.</p>
+        <div class="tasks h">
+          <ul id="task-list">
+
+          </ul>
+        </div>
+      </div>
+      <div class="add-btn">
+        <button class="add-button">Add</button>
+      </div>
+    </div>
+    <div class="checklist">
+
+    </div>
+    <div class="hhn">
+
+    </div>
+    <div class="stalk-market">
+
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

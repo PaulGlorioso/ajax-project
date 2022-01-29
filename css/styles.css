@@ -1,0 +1,152 @@
+body {
+  width: 100%;
+}
+
+main {
+  font-family: "Roboto slab", serif;
+}
+
+.open {
+  background-color: #e5e5e5;
+  padding: 0.5rem;
+}
+
+.open > i {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+a {
+  color: black;
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+
+.close {
+  font-size: 2rem;
+}
+
+.list-section {
+  width: 100%;
+}
+
+.no-tasks {
+  font-size: large;
+}
+
+.no-tasks.h {
+  display: none;
+}
+
+.tasks {
+  border: 1px solid black;
+  border-radius: 2rem;
+  background-color: #ffc3c325;
+}
+
+.tasks.h {
+  display: none;
+}
+
+ul {
+  padding: 0 2rem;
+}
+
+li {
+  font-size: x-large;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+li:last-child {
+  border-bottom: 0;
+}
+
+.add-btn > button {
+  background-color: green;
+  font-size: 2rem;
+  padding: 0.1rem 2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+.add-btn.h {
+  display: none;
+}
+
+.fa-circle {
+  font-size: small;
+  padding-right: 1rem;
+}
+
+.li-sel > input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.add-form {
+  border: 1px solid black;
+  border-radius: 2rem;
+  background-color: #ffc3c325;
+}
+
+textarea {
+  font-size: x-large;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.sub > button {
+  background-color: green;
+  font-size: 1.5rem;
+  padding: 0.1rem 2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.select > button {
+  background-color: green;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.select > a {
+  text-decoration: none;
+  background-color: red;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .tasks {
+    border: 3px solid black;
+  }
+
+  li {
+    border-bottom: 3px solid black;
+  }
+
+  .add-form {
+    border: 3px solid black;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1rem 0;
+  }
+
+  nav > i {
+    pointer-events: none;
+    padding-right: 1rem;
+  }
+}
